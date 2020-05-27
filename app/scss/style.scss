@@ -72,13 +72,13 @@
     &-title {
         margin-bottom: 10px;
         font-size: 48px;
-        font-weight: 700;
+        @include f700;
         line-height: 72px;
     }
     &-text {
         margin-bottom: 40px;
         font-size: 20px;
-        font-weight: 500;
+        @include f500;
         line-height: 30px;
     }
     &-form {
@@ -93,7 +93,7 @@
             height: 56px;
             border: none;
             font-size: 14px;
-            font-weight: 500;
+            @include f700;
             outline: none;
             padding-left: 25px;
             padding-right: 60px;
@@ -161,7 +161,7 @@
         padding: 10px 30px;
         min-height: 90px;
         align-items: center;
-        font-weight: 500;
+        @include f500;
         border-bottom: 2px solid #e7ecf2;
     }
     &-name {
@@ -180,7 +180,7 @@
     &-price {
         font-size: 20px;
         color: $bg;
-        font-weight: 700;
+        @include f700;
     }
     &-info {
         display: flex;
@@ -205,7 +205,7 @@
         }
         span {
             font-size: 14px;
-            font-weight: 500;
+            @include f500;
         }
         &-star {
             span {
@@ -237,11 +237,77 @@
 // slider__products
 .product-slider {
     padding: 110px 0px 120px;
-    background-color: blue;
-    height: 1200px;
 }
 
-.rate-star {
-    display: inline-block;
-    margin-right: 13px;
+// start-advantages 
+.advantages {
+    background-color: $bg;
+}
+
+.advantages__title {
+    text-align: center;
+    color: white;
+    @include f700;
+    font-size: 36px;
+    padding-top: 30px;
+    line-height: 60px;
+}
+
+.advantages__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.advantages__item {
+    max-width: 370px;
+    text-align: center;
+    padding: 0px 15px;
+    transition: all 0.5s;
+    &:hover {
+        .advantages__item--images {
+            background-color: $green;
+        }
+        .advantages__item--title {
+            color: $green;
+        }
+        .advantages__item--images {
+            g {
+                fill: #fff;
+            }
+        }
+    }
+    &-images {
+        width: 114px;
+        height: 114px;
+        background-color: white;
+        justify-content: center;
+        margin: 0 auto;
+        align-items: center;
+        transition: all 0.5s;
+    }
+    &-title {
+        margin-bottom: 25px;
+        font-size: 24px;
+        color: white;
+        @include f500;
+        transition: all 0.5s;
+    }
+    &-text {
+        font-size: 15px;
+    }
+    .icosvg-1 {
+        svg {
+            width: 50px;
+        }
+    }
+    .icosvg-2 {
+        svg {
+            width: 70px;
+        }
+    }
+    .icosvg-3 {
+        svg {
+            width: 86px;
+        }
+    }
 }
